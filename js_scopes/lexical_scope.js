@@ -1,4 +1,5 @@
 //Lexical scope means compile time scope. Scope decisions were made during compilation
+// Dynamic scoping : Run time
 
 var bar = "bar";
 
@@ -18,6 +19,9 @@ setTimeout('var  doSomething =42;console.log(doSomething);', 1000); //Kind of ev
 /*with is lexically scoped . When we see a reference to d, scope of with is searched, if not next outer level
 until one is created in global level
 creates a whole new lexical scope
+
+undefined: doesn't currently have a value
+undeclared: not declared => declaring existance and need for memory allocation, reference error
 */
 
 var obj = {
@@ -34,3 +38,19 @@ with(obj) {
 
 console.log(d); // 3
 console.log(obj.d); // undefined
+
+
+
+
+//Theoretical Dynamic Scoping
+
+function foo() {
+  console.log(baz); //Dynamic
+}
+
+function bar() {
+  var baz = "baz";
+  foo();
+}
+
+bar();
