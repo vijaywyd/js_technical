@@ -17,8 +17,6 @@ function fun() {
 
 fun();
 
-
-
 var a = b(); // 10 ; Function declarations are hoisted
 var c = d(); // d is not a function error, function expressions are not hoisted
 
@@ -26,14 +24,11 @@ function b() {
   return 10;
 }
 
-
-
 var d = function() {
   return 20
 }
 
 console.log(a);
-
 
 // ----------------------------------------------------------
 
