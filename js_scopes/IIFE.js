@@ -54,3 +54,24 @@ console.log(counter.value); // 1
 counter.increment();
 counter.increment();
 console.log(counter.value); // 3
+
+
+
+
+
+//IIFE and Closure
+
+
+for(var i = 0; i <=5; i++) {
+  setTimeout(function() {
+    console.log(i);  // Prints 6 five times because all functions refer to same i
+  }, i*1000);
+}
+
+for(var i = 0; i <=5; i++) {
+  (function(i) {
+    setTimeout(function() {
+    console.log(i);  // 0, 1, 2, 3, 4
+    }, i*1000);
+  })(i);  //With IFFE, local scope is created for the function within each iteration; Same resut is observed with let variables
+}
