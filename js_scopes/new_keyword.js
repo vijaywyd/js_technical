@@ -1,9 +1,9 @@
 /*
 Function call becomes constructor call
 
-A new object will be created
 Objects get linked to a different object
 Object gets bound as this keyword for function call
+A new object will be created
 Function returns new object with all this references as its properties
 */
 
