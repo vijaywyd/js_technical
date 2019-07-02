@@ -1,4 +1,6 @@
 
+//Constructor: Function called with new keyword
+
 function fun(name) {
   this.name = name;
 
